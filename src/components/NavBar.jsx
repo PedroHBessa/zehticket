@@ -43,8 +43,7 @@ function NavBar() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          {" "}
-         Eventos
+        <Link to="/events">Eventos</Link>
         </li>
         <li>Contato</li>
         <li>

@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar"
 import Hero from './components/Hero';
 import Login from "./components/Login"
 import Signup from "./components/Signup"
+import EventList from "./components/EventList"
 
 
 import {
@@ -24,6 +25,7 @@ function App() {
          <Route path='' element={<Hero />} />
          <Route path='signup' element={<Signup/>} />
          <Route path='login' element={<Login/>} />
+         <Route path='events' element={<EventList/>} />
        </Route>
      </Routes>
      </BrowserRouter>

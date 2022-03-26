@@ -7,7 +7,7 @@ function Card(props) {
     setState(props.id);
   };
   return (
-    <div>
+    <>
       <li
         title="event"
         onClick={(e) => {
@@ -25,7 +25,7 @@ function Card(props) {
         </div>
       </li>
       {state ? <Navigate to={`/events/${props.id}`} /> : ""}
-    </div>
+    </>
   );
 }
 
