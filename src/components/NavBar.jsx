@@ -11,7 +11,7 @@ import UserMenu from "./UserMenu";
 
 function NavBar() {
  
-  const [isLogged, setIsLogged] = useState(true);
+  const [isLogged, setIsLogged] = useState(false);
   const [userName, setUserName] = useState("");
  
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -99,7 +99,7 @@ function NavBar() {
       <div className="navbar">
         <div className="navbar__logo">
           {" "}
-        ZEETICKET
+        ZEHTICKET
         </div>
         <div className="navbar__search">
           <form action="">
