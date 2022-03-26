@@ -5,7 +5,7 @@
   background-image: linear-gradient(to right,#42A1EC, #0070C9,  #a31b9c,  #fffb09);
   position: absolute;
   width: 100%;
- top: 72px;
+ top: 82px;
  left: 0;
   height: 5px;
   z-index: 100;
@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px 0 15px 0;
+  padding: 15px 0 15px 0;
   position: relative;
   background-image: linear-gradient(rgb(58, 58, 58), rgb(0, 0, 0));
   z-index: 99;
@@ -128,11 +128,10 @@
       padding:  8px 20px;
 
       &:hover{
-        transform: scale(1.1);
+        
        
         cursor: pointer;
         
-        transition: all 0.5s;
        
       }
     

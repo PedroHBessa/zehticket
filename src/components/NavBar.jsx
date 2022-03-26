@@ -1,18 +1,17 @@
 
-import "../styles/navbar.scss";
 
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
 
 import { useState } from "react";
-
+import { BiDownArrow } from "react-icons/bi"
 
 
 import UserMenu from "./UserMenu";
 
 function NavBar() {
  
-  const [isLogged, setIsLogged] = useState(false);
+  const [isLogged, setIsLogged] = useState(true);
   const [userName, setUserName] = useState("");
  
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -24,15 +23,19 @@ function NavBar() {
 
 
   const toggleMenu = () => {
-    if (!menuIsOpen) {
+    if (menuIsOpen) {
       document.querySelector(".user-menu").style.transform =
-        "translateY(-150%)";
+      "translateY(-150%)";
       document.querySelector(".arrow > svg").style.transform = "rotate(0deg)";
+      
+      
     } else {
       document.querySelector(".user-menu").style.transform = "translateY(0%)";
       document.querySelector(".arrow > svg").style.transform = "rotate(180deg)";
+      
+     
     }
-    setMenuIsOpen(!menuIsOpen);
+    setMenuIsOpen(!menuIsOpen)
   };
 
   const menuLoggedOut = (
@@ -61,11 +64,11 @@ function NavBar() {
       <ul className="navbar__menu__logedin">
         <li>
           {" "}
-         <a href="">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
           {" "}
-          <a href="">eventos</a>
+          <Link to="/events">Eventos</Link>
         </li>
         <li>Contato</li>
       </ul>
@@ -85,7 +88,7 @@ function NavBar() {
           alt="/"
         />
         <span className="arrow">
-        arrowicon
+        <BiDownArrow />
         </span>
       </div>
     </div>

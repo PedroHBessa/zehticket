@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Outlet } from "react-router-dom";
 import "../styles/videos.scss";
 import Card from "./Card";
 
@@ -10,6 +11,7 @@ function EventList(props) {
 
   return (
     <section className="videos__main">
+      <Outlet />
       <ul className="videos__list">
       <Card
         title="123"

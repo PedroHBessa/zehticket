@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Card(props) {
-  const [state, setState] = useState(null);
-  const onClickEvent = () => {
-    setState(props.id);
-  };
+
   return (
-    <>
+    <Link to="test">
       <li
         title="event"
         onClick={(e) => {
-          onClickEvent();
+         
         }}
       >
         <div className="hover">
@@ -24,8 +21,8 @@ function Card(props) {
           <p>{props.description}</p>
         </div>
       </li>
-      {state ? <Navigate to={`/events/${props.id}`} /> : ""}
-    </>
+     
+    </Link>
   );
 }
 

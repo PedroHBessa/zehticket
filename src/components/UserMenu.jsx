@@ -1,7 +1,5 @@
 import React from "react";
-import "../styles/user-menu.scss";
 
-import "../styles/panel.scss";
 
 function UserMenu() {
   
