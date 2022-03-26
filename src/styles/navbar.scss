@@ -1,19 +1,21 @@
 .bar::before{
     
   content: "";
+  display: block;
   background-image: linear-gradient(to right,#42A1EC, #0070C9,  #a31b9c,  #fffb09);
   position: absolute;
   width: 100%;
- top: 97px;
+ top: 72px;
+ left: 0;
   height: 5px;
-  z-index: 90;
+  z-index: 100;
 }
 
 .navbar{
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px 0 20px 0;
+  padding: 10px 0 15px 0;
   position: relative;
   background-image: linear-gradient(rgb(58, 58, 58), rgb(0, 0, 0));
   z-index: 99;

@@ -40,7 +40,7 @@ function NavBar() {
       <ul className="navbar__menu__logedout">
         <li>
           {" "}
-       Home
+          <Link to="/">Home</Link>
         </li>
         <li>
           {" "}
@@ -48,10 +48,10 @@ function NavBar() {
         </li>
         <li>Contato</li>
         <li>
-         Login
+          <Link to="/login">Login</Link>
         </li>
         <li>
-          Registre-se
+          <Link to="signup">Registre-se</Link>
         </li>
       </ul>
     </div>
