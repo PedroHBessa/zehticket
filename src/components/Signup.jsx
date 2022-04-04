@@ -1,61 +1,59 @@
 import React, { useState } from "react";
 import "../styles/signup.scss";
-
-//import { AiFillCloseSquare } from "react-icons/ai";
-
-
+import verbs from "../server/axios";
 import { useNavigate } from "react-router-dom";
+import Form from "./Form";
 
 function Signup(props) {
 
-  const [user, setUser] = useState(null);
+  const location = useNavigate();
 
-  const [loginError, setLoginError] = useState("");
+  const [data, setData] = useState({});
 
-  const closeWindow = () => {
-    console.log((document.querySelector(".login-form").style.opacity = "0"));
-  
-  };
-
-  setTimeout(() => {
-    document.querySelector(".signup-form").style.transform = "scale(1)";
-  }, 50);
 
  
+  const sendData = () => {
+    console.log(data);
+    console.log("loading...");
+    verbs
+      .post("register", data)
+      .then((response) => {
+        
+        location("/", { replace: true });
+      })
+      .catch((error) => console.log(error));
+  };
 
-  
-
-  const form = (
-    <form className="signup-form" >
-      <div className="close-btn" >
-       
-      </div>
-      <h1>Cadastre-se</h1>
-      <label>
-        <input name="name" type="text" placeholder="nome" />
-      </label>
-      <label>
-        <input name="email" type="text" placeholder="email" />
-      </label>
-      <label>
-        <input name="password" type="password" placeholder="senha" />
-      </label>
-      <button className="signup-form__button" >
-        <strong>Cadastrar</strong>
-      </button>
-    </form>
-  );
-
-  const feedback = (
-    <div className="signup-feedback">
-      <div className="close-btn" >
-      
-      </div>
-      <p>Enviamos um link de confirmação para o seu email. =)</p>
-    </div>
-  );
-
-  return <section>{form}</section>;
+  return (
+    <Form title={"Cadastre-se"}>
+      <><label>
+    <input name="name" type="text" placeholder="nome" onChange={(e) =>
+            setData({
+              ...data,
+              name: e.target.value,
+            })
+          }/>
+  </label>
+  <label>
+    <input name="email" type="text" placeholder="email" onChange={(e) =>
+            setData({
+              ...data,
+              email: e.target.value,
+            })
+          }/>
+  </label>
+  <label>
+    <input name="password" type="password" placeholder="senha" onChange={(e) =>
+            setData({
+              ...data,
+              password: e.target.value,
+            })
+          } />
+  </label>
+  <button onClick={sendData} className="signup-form__button" >
+    <strong>Cadastrar</strong>
+  </button></>
+    </Form>)
 }
 
 export default Signup;
