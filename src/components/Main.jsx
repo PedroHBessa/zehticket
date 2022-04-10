@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Outlet, useLocation } from "react-router-dom";
+import Footer from "./Footer";
 import Home from "./Home";
 import NavBar from "./NavBar";
 import NavBarConsole from "./NavBarConsole";
@@ -43,11 +44,11 @@ const Main = () => {
                 <NavBar />
                 <Outlet />
         </>
-        
-        
+          
+            
        
         }
-     
+         <Footer /> 
         
         </>
     )
