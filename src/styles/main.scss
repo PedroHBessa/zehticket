@@ -1,7 +1,4 @@
-@import "./globals.scss";
-@import "./login.scss";
-@import "./navbar.scss";
-@import "./signup.scss";
-@import "./user-menu.scss";
-@import "./panel.scss";
-@import "./form.scss"
+#btn{
+    position: absolute;
+    z-index: 999;
+}

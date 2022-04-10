@@ -4,13 +4,13 @@
     right: 0;
     width: 350px;
     background-color: rgb(255, 255, 255);
-    padding: 10px 0;
+    padding: 10px 0 0 0;
     background-color:  rgba(0, 0, 0);
     box-shadow: 5px 5px 24px 5px #000000;
     padding-top: 0px;
     z-index: 95;
     transition: transform 1s;
-    & ul li p{
+    & ul li a{
         text-align: center;
        display: block;
         padding: 20px 0;

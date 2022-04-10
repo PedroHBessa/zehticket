@@ -8,35 +8,11 @@ import { BiDownArrow } from "react-icons/bi"
 
 
 import UserMenu from "./UserMenu";
+import NavBarConsole from "./NavBarConsole";
 
 function NavBar() {
  
   const [isLogged, setIsLogged] = useState(false);
-  const [userName, setUserName] = useState("");
- 
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
-
- 
-
-
-
-
-
-  const toggleMenu = () => {
-    if (menuIsOpen) {
-      document.querySelector(".user-menu").style.transform =
-      "translateY(-150%)";
-      document.querySelector(".arrow > svg").style.transform = "rotate(0deg)";
-      
-      
-    } else {
-      document.querySelector(".user-menu").style.transform = "translateY(0%)";
-      document.querySelector(".arrow > svg").style.transform = "rotate(180deg)";
-      
-     
-    }
-    setMenuIsOpen(!menuIsOpen)
-  };
 
   const menuLoggedOut = (
     <div className="navbar__menu">
@@ -75,48 +51,36 @@ function NavBar() {
     </div>
   );
 
-  const userConsole = (
-    <div className="navbar__user-console" onClick={toggleMenu}>
-      <div className="navbar__user-console__text">
-        <span>{`Bem-vindo,  ${userName} `}</span>
-      </div>
-      <div className="navbar__user-console__img">
-        <img
-          width={60}
-          height={60}
-          src={require("../assets/profile-s.jpeg")}
-          alt="/"
-        />
-        <span className="arrow">
-        <BiDownArrow />
-        </span>
-      </div>
-    </div>
-  );
+  const menu = () => {
+ 
+  }
+
+  
 
   return (
     <div className="bar">
+         
       <div className="navbar">
-        <div className="navbar__logo">
-          {" "}
-        ZEHTICKET
-        </div>
-        <div className="navbar__search">
-          <form action="">
-            <input
-              className="navbar__search__form__input"
-              type="text"
-              placeholder="procurar eventos"
-            />
-          </form>
-        </div>
-        {isLogged ? menuLoggedIn : menuLoggedOut}
-        {isLogged ? userConsole : null}
-      </div>
-      <UserMenu />
-      <div>
+      <div className="navbar__logo">
         {" "}
-        <Outlet />
+      ZEHTICKET
+      </div>
+      <div className="navbar__search">
+        <form action="">
+          <input
+            className="navbar__search__form__input"
+            type="text"
+            placeholder="procurar eventos"
+          />
+        </form>
+      </div>
+      {isLogged ? menuLoggedIn : menuLoggedOut}
+    </div>
+    )
+     
+ 
+      <div>
+    
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 function UserMenu() {
@@ -12,22 +13,22 @@ function UserMenu() {
  
   };
   return (
-    <div className="user-menu">
+    <div className="user-menu" onClick={() => signOut()}>
       <ul>
         <li>
-          <p>Profile</p>
+        <Link to={"panel"}>Profile</Link>
         </li>
         <li>
-          <p>Criar Evento</p>
+          <Link to={"panel"}>Painel</Link>
         </li>
         <li>
-          <p>Meus Eventos</p>
+        <Link to={"panel"}>Configurações</Link>
         </li>
         <li>
-          <p>Configurações</p>
+        <Link to={"panel"}>Suporte</Link>
         </li>
         <li onClick={signOut}>
-          <p>Logout</p>
+        <Link to={"panel"}>Sair</Link>
         </li>
       </ul>
     </div>
