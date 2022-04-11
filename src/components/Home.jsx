@@ -2,7 +2,7 @@ import Form from "./Form";
 import Login from "./Login";
 import NavBar from "./NavBar";
 import NavBarConsole from "./NavBarConsole";
-import Signup from "./Signup";
+import Signup from "./Contact";
 import UserMenu from "./UserMenu";
 
 

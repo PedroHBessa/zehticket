@@ -12,27 +12,9 @@ import NavBarConsole from "./NavBarConsole";
 
 function NavBar() {
 
-  const navigate = useNavigate()
 
-  useEffect(()=>{
-    let baseURL = "http://localhost:3000/"
-    let loc = document.location.href.replace(baseURL, "")
-    if(loc === ""){
-      loc = "home"
-    }
-    console.log(loc)
 
-    let liArray = document.querySelectorAll(".navbar__menu__logedout > li > a")
 
-    liArray.forEach((el)=>{
-      el.style.color = "rgba(255, 255, 255, 0.671)"
-    })
-
-    const selected = document.getElementById(loc)
-    selected.style.color = "white"
-   
-  }
-  )
  
  /*  const handleNavigation = (href, target) => {
    
@@ -93,10 +75,20 @@ function NavBar() {
         <Link id="contact" to={"/contact"}>Contato</Link>
           </li>
         <li>
-          <a href="https://adm.zehticket.com.br/">Sou Produtor</a>
-        </li>
+        <Link id="contact" to={"/login"}>Login</Link>
+          </li>
+          <li >
+        <Link id="contact" to={"/signup"}>Cadastre-se</Link>
+          </li>
+       
+      
       </ul>
+      </div>
+      <div className="navbar__producer-btn">
+      <a target={"_blank"} href="https://adm.zehticket.com.br/">ÁREA DO PRODUTOR</a>
+     
     </div>
+   
     </div>
     )
      

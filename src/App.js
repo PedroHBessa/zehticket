@@ -14,6 +14,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Signup from './components/Signup';
 
 
 
@@ -29,6 +30,7 @@ function App() {
          <Route path='' element={<Hero />} />
          <Route path='contact' element={<Contact/>} />
          <Route path='login' element={<Login/>} />
+         <Route path='signup' element={<Signup/>} />
          
          <Route path='events' element={<EventList/>} >
           <Route path='test' element={<EventScreen />}/>

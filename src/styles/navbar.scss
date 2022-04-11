@@ -14,6 +14,7 @@
 .navbar{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   padding: 15px 0 15px 0;
   position: relative;
@@ -57,7 +58,7 @@
   }
 
   &__logo{
-    flex-grow: 0.5;
+  
     font-size: 50px;
     color: white;
     text-align: left;
@@ -68,8 +69,8 @@
   }
 
   &__search{
-    flex-grow: 2; 
-
+    width: 25%;
+    margin: 0 20px;
     &__form{
 
       height: 100%;
@@ -84,11 +85,13 @@
   }
 
   &__menu{
-    flex-grow: 1;
-   
+  
+   color: rgba(255, 255, 255, 0.507);
     
     & ul{
-     margin-left: 30px;
+     text-align: right;
+     float: right;
+     
     
 
      &::after{
@@ -101,38 +104,44 @@
     }
     & ul li{
       font-weight: 500;
-      font-size: 18px;
+      font-size: 16px;
       
       display: inline-block;
-      padding: 15px 12px;
+      padding: 15px 8px;
       opacity: 1;
-  
+      transition: color 0.5s;
+     
     }
     & ul li:hover{
       color: white;
       cursor: pointer;
       
-      transition: color 0.5s;
+      
      
     }
     
-    &__logedout li:last-child{
-      background-image: linear-gradient(to bottom right,#42A1EC, #0070C9,  #a31b9c,  #fffb09);
-      border-radius: 5px;
-      font-size: 20px;
-      color: rgba(255, 255, 255, 0.911);
-      margin-left: 10px;
-      border-radius: 50px;
-      padding:  8px 20px;
+   
+  }
 
-      &:hover{
-        
-       
-        cursor: pointer;
-        
-       
-      }
+  &__producer-btn{
+    color: rgba(255, 255, 255, 0.507);
+    border: rgba(255, 255, 255, 0.507) solid 1px;
+
+    padding: 10px 15px;
+    margin-right: 40px;
+    border-radius: 10px;
+    font-size: 13px;
+   
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.5s, border 0.5s, background-image 0.5s;
+    font-weight: 500;
+
+    &:hover{
+      color: rgba(255, 255, 255, 0.9);
     
+     
+      
       
     }
   }
@@ -153,4 +162,7 @@
   transition: all 1s;
 }
 
+.special-btn{
+  
+}
 
