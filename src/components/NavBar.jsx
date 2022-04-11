@@ -1,7 +1,7 @@
 
 
-import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 
 import { useState } from "react";
 import { BiDownArrow } from "react-icons/bi"
@@ -11,50 +11,56 @@ import UserMenu from "./UserMenu";
 import NavBarConsole from "./NavBarConsole";
 
 function NavBar() {
- 
-  const [isLogged, setIsLogged] = useState(false);
 
-  const menuLoggedOut = (
-    <div className="navbar__menu">
-      <ul className="navbar__menu__logedout">
-        <li>
-          {" "}
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-        <Link to="/events">Eventos</Link>
-        </li>
-        <li>Contato</li>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-        <li>
-          <Link to="signup">Registre-se</Link>
-        </li>
-      </ul>
-    </div>
-  );
+  const navigate = useNavigate()
 
-  const menuLoggedIn = (
-    <div className="navbar__menu">
-      <ul className="navbar__menu__logedin">
-        <li>
-          {" "}
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          {" "}
-          <Link to="/events">Eventos</Link>
-        </li>
-        <li>Contato</li>
-      </ul>
-    </div>
-  );
+  useEffect(()=>{
+    let baseURL = "http://localhost:3000/"
+    let loc = document.location.href.replace(baseURL, "")
+    if(loc === ""){
+      loc = "home"
+    }
+    console.log(loc)
 
-  const menu = () => {
- 
+    let liArray = document.querySelectorAll(".navbar__menu__logedout > li > a")
+
+    liArray.forEach((el)=>{
+      el.style.color = "rgba(255, 255, 255, 0.671)"
+    })
+
+    const selected = document.getElementById(loc)
+    selected.style.color = "white"
+   
   }
+  )
+ 
+ /*  const handleNavigation = (href, target) => {
+   
+   
 
+    
+
+
+    
+    switch(loc){
+      case "/":
+        
+        target.style.color = "white"
+      break;
+      case "/events":
+        console.log("ok")
+      break;
+      case "/contact":
+        console.log("ok")
+      break;
+        default: 
+        console.log("error")
+    }
+   
+    
+    navigate(href)
+    console.log(window.location.href)
+  } */
   
 
   return (
@@ -74,7 +80,23 @@ function NavBar() {
           />
         </form>
       </div>
-      {isLogged ? menuLoggedIn : menuLoggedOut}
+      <div className="navbar__menu">
+      <ul className="navbar__menu__logedout">
+        <li>
+        
+          <Link id="home" to={"/"}>Home</Link>
+        </li>
+        <li>
+        <Link id="events" to={"/events"}>Eventos</Link>
+        </li>
+        <li >
+        <Link id="contact" to={"/contact"}>Contato</Link>
+          </li>
+        <li>
+          <a href="https://adm.zehticket.com.br/">Sou Produtor</a>
+        </li>
+      </ul>
+    </div>
     </div>
     )
      

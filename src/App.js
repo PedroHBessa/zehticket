@@ -4,7 +4,7 @@ import './styles/index.scss';
 
 import Hero from './components/Hero';
 import Login from "./components/Login"
-import Signup from "./components/Signup"
+import Contact from "./components/Contact"
 import EventList from "./components/EventList"
 import EventScreen from "./components/EventScreen"
 import Main from './components/Main';
@@ -14,7 +14,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Panel from './components/Panel';
+
 
 
 
@@ -27,9 +27,9 @@ function App() {
      <Routes>
        <Route path='/' element={<Main />} >
          <Route path='' element={<Hero />} />
-         <Route path='signup' element={<Signup/>} />
+         <Route path='contact' element={<Contact/>} />
          <Route path='login' element={<Login/>} />
-         <Route path='panel' element={<Panel/>} />
+         
          <Route path='events' element={<EventList/>} >
           <Route path='test' element={<EventScreen />}/>
          </Route>

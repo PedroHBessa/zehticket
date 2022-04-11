@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "../styles/signup.scss";
+
 import verbs from "../server/axios";
 import { useNavigate } from "react-router-dom";
 import Form from "./Form";
 
-function Signup(props) {
+function Contact(props) {
 
   const location = useNavigate();
 
@@ -25,35 +25,35 @@ function Signup(props) {
   };
 
   return (
-    <Form title={"Cadastre-se"}>
-      <><label>
-    <input name="name" type="text" placeholder="nome" onChange={(e) =>
+    <Form title={"Contato"}>
+      <><label>Nome
+    <input name="name" type="text" onChange={(e) =>
             setData({
               ...data,
               name: e.target.value,
             })
           }/>
   </label>
-  <label>
-    <input name="email" type="text" placeholder="email" onChange={(e) =>
+  <label>E-mail
+    <input name="email" type="text" onChange={(e) =>
             setData({
               ...data,
               email: e.target.value,
             })
           }/>
   </label>
-  <label>
-    <input name="password" type="password" placeholder="senha" onChange={(e) =>
+  <label>Mensagem</label>
+    <textarea name="text" type="text" onChange={(e) =>
             setData({
               ...data,
               password: e.target.value,
             })
           } />
-  </label>
+  
   <button onClick={sendData} className="signup-form__button" >
-    <strong>Cadastrar</strong>
+    <strong>Enviar</strong>
   </button></>
     </Form>)
 }
 
-export default Signup;
+export default Contact;
