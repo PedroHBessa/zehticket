@@ -9,6 +9,10 @@ import { BsCart4 } from 'react-icons/bs'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import { BsCalendarCheck } from 'react-icons/bs'
 import { GoLocation } from 'react-icons/go'
+import br from '../assets/flag-icons-main/flags/4x3/br.svg'
+
+import GoogleMapReact from "google-map-react";
+
 
 function EventScreen(props) {
   
@@ -22,12 +26,20 @@ function EventScreen(props) {
 
   }
 
+  useEffect(()=>{
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  },[])
+
 
   useEffect(() => {
+    console.log('carregou')
+    
+
       const onScroll = () => setOffset(window.pageYOffset);
       const ticketScreen = document.querySelector(".event-screen__tickets")
       rect(ticketScreen)
-      console.log(y)
+     
       if(y < 0){
         ticketScreen.style.position = `fixed`;
         
@@ -89,10 +101,128 @@ function EventScreen(props) {
 
             Pellentesque vehicula tincidunt convallis. Morbi lectus mauris, tristique ultrices cursus vitae, rutrum in sapien. Etiam sit amet eleifend tortor. In sem justo, pretium ut fringilla in, porta eget sem. Suspendisse ut ante rhoncus, consequat purus eu, ultrices lectus. Fusce ac sodales massa, porta viverra lorem. Donec elementum volutpat accumsan. In euismod neque id libero vestibulum, sit amet ultricies sem congue. Nunc a velit mattis, pharetra lorem vel, malesuada metus. In ultricies diam at ante ullamcorper sodales. Proin lorem orci, ornare sed commodo ut, sollicitudin a turpis. Quisque egestas velit vel enim interdum maximus. 
           </p>
- 
+
+          <h1>LINE</h1>
+
+          <div className="event-screen__content__line">
+            
+            <span className="event-screen__content__line__country">
+              <img width={20} src={br} alt="" srcset="" /> 
+            </span>
+            <span>
+              Jorginho tec tec do raitec 
+            </span>
+           
+            
+          </div>
+          <div className="event-screen__content__line">
+            
+            <span className="event-screen__content__line__country">
+              <img width={20} src={br} alt="" srcset="" /> 
+            </span>
+            <span>
+              psyco átrico de jurujuba 
+            </span>
+           
+            
+          </div>
+          <div className="event-screen__content__line">
+            
+            <span className="event-screen__content__line__country">
+              <img width={20} src={br} alt="" srcset="" /> 
+            </span>
+            <span>
+              forest do brokeback mountain
+            </span>
+           
+            
+          </div>
+          <div className="event-screen__content__line">
+            
+            <span className="event-screen__content__line__country">
+              <img width={20} src={br} alt="" srcset="" /> 
+            </span>
+            <span>
+              nintendo travado 64bits 
+            </span>
+           
+            
+          </div>
+          <div className="event-screen__content__line">
+            
+            <span className="event-screen__content__line__country">
+              <img width={20} src={br} alt="" srcset="" /> 
+            </span>
+            <span>
+              som ambiente de obra
+            </span>
+           
+            
+          </div>
+          <div className="event-screen__content__line">
+            
+            <span className="event-screen__content__line__country">
+              <img width={20} src={br} alt="" srcset="" /> 
+            </span>
+            <span>
+              energy generator sound
+            </span>
+           
+            
+          </div>
+          <div className="event-screen__content__line">
+            
+            <span className="event-screen__content__line__country">
+              <img width={20} src={br} alt="" srcset="" /> 
+            </span>
+            <span>
+              sharanga criminosa
+            </span>
+           
+            
+          </div>
+          <div className="event-screen__content__line">
+            
+            <span className="event-screen__content__line__country">
+              <img width={20} src={br} alt="" srcset="" /> 
+            </span>
+            <span>
+              end enemy
+            </span>
+           
+            
+          </div>
+          <div className="event-screen__content__line">
+            
+            <span className="event-screen__content__line__country">
+              <img width={20} src={br} alt="" srcset="" /> 
+            </span>
+            <span>
+              tv chiada
+            </span>
+           
+            
+          </div>
+          <div className="maps" style={{width: "100%", height: "250px", marginTop: "40px"}}>
+        <GoogleMapReact
+
+        bootstrapURLKeys={{
+          // remove the key if you want to fork
+          key: "AIzaSyCKo1tHIegRhc0l2zvvqG7dfC4nM8lYqwg",
+          language: "en",
+          region: "US"
+        }}
+        width={500}
+        defaultCenter={{ lat: 51.506, lng: -0.169 }}
+        defaultZoom={15}
+     
+      />
+      </div>
+       
+      
+         
         </div>
       
-     
       </div>
       <div className="tickets-ghost">
       <div className="event-screen__tickets">

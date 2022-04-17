@@ -32,9 +32,10 @@ function App() {
          <Route path='login' element={<Login/>} />
          <Route path='signup' element={<Signup/>} />
          
-         <Route path='events' element={<EventList/>} >
-          <Route path='test' element={<EventScreen />}/>
-         </Route>
+         <Route path='events' element={<EventList/>} />
+         <Route path='events/test' element={<EventScreen />}/>
+          
+      
        </Route>
      </Routes>
      </BrowserRouter>

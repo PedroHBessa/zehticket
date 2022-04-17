@@ -18,6 +18,8 @@
     &__content{
       flex: 5;
 
+      
+
       &__info{
         
         display: flex;
@@ -35,6 +37,18 @@
           }
 
         
+      }
+
+      &__line{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        padding-bottom: 10px;
+        
+
+        &__country{
+          padding-right: 5px;
+        }
       }
       
       
