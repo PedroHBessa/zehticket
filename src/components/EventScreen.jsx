@@ -1,14 +1,52 @@
+import { useEffect, useState } from "react";
+
 import "../styles/event-screen.scss";
 
 import React from "react";
 import img1 from "../assets/img1.jpg"
 import Ticket from "./Ticket";
 import { BsCart4 } from 'react-icons/bs'
+import { AiOutlineClockCircle } from 'react-icons/ai'
+import { BsCalendarCheck } from 'react-icons/bs'
+import { GoLocation } from 'react-icons/go'
 
 function EventScreen(props) {
   
 
-  
+  const [offset, setOffset] = useState(0);
+  const [y, setY] = useState(0)
+
+  const rect = (el) => {
+    var rect = el.getBoundingClientRect();
+    setY(rect.top)
+
+  }
+
+
+  useEffect(() => {
+      const onScroll = () => setOffset(window.pageYOffset);
+      const ticketScreen = document.querySelector(".event-screen__tickets")
+      rect(ticketScreen)
+      console.log(y)
+      if(y < 0){
+        ticketScreen.style.position = `fixed`;
+        
+      } else {
+        ticketScreen.style.position = `relative`;
+      }
+      // clean up code
+      window.removeEventListener('scroll', onScroll);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      return () => {
+      
+      ticketScreen.style.position = `relative`
+      window.removeEventListener('scroll', onScroll);
+      
+      }
+  }, [offset]);
+
+
+ 
 
  
 
@@ -16,16 +54,33 @@ function EventScreen(props) {
 
 
   return (
-
-   
-    <div className="event-screen">
-      <div className="event-screen__content">
-        <div className="event-screen__content__img">
+<>
+    <div className="event-screen__img">
           <img height={300} width={'100%'} src={img1} alt="imgem"></img>
         </div>
+    <div className="event-screen">
+      
+      <div className="event-screen__content">
+       
       
         <div className="event-screen__content__text">
-          <h1>Evento do marquin</h1>
+          <p className="title">Evento do marquin</p>
+          <div className="event-screen__content__info">
+            <div className="event-screen__content__info__item">
+              <BsCalendarCheck size={'19px'} />
+              <span>20/09/2022</span>
+            </div>
+            <div className="event-screen__content__info__item">
+              <AiOutlineClockCircle size={'19px'}/>
+              <span>19:00h</span>
+            </div>
+            <div className="event-screen__content__info__item">
+              <GoLocation size={'19px'} color={"white"}/>
+              <span>Silva Jardim - RJ</span>
+            </div>
+          </div>
+       
+        
           <p>
 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at accumsan ipsum. Aenean porta nisl eu libero maximus, eu blandit nisi pellentesque. Vestibulum pharetra eget elit et iaculis. Integer rutrum nibh ac justo consequat, nec commodo metus faucibus. Quisque ut interdum eros. Nullam sit amet nibh ac urna ultrices auctor ultricies hendrerit libero. Integer iaculis ex quam, vitae auctor metus porta et. Cras tempor malesuada sollicitudin. Duis egestas ipsum ut orci suscipit, et aliquet augue ultrices. Nam dapibus sem nec odio posuere pulvinar. Fusce commodo purus in venenatis luctus. Curabitur tellus nibh, tristique a luctus non, convallis et lorem. Praesent tincidunt pellentesque magna, ut porta metus convallis nec.
@@ -39,6 +94,7 @@ function EventScreen(props) {
       
      
       </div>
+      <div className="tickets-ghost">
       <div className="event-screen__tickets">
         <div className="event-screen__tickets__title">
         <span>Ingressos</span>
@@ -66,9 +122,12 @@ function EventScreen(props) {
 
       
       </div>
+      </div>
       
     </div>
+    </>
   );
 }
+
 
 export default EventScreen;

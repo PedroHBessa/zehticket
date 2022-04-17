@@ -1,7 +1,7 @@
 .event-screen{
   display: flex;
- color: antiquewhite;
-    background-color: rgb(0, 0, 0);
+ color: rgb(243, 243, 243);
+    background-color: rgb(19, 19, 19);
 
     &__totals{
       padding: 20px;
@@ -16,7 +16,26 @@
     }
 
     &__content{
-      flex: 3;
+      flex: 5;
+
+      &__info{
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 0;
+        font-weight: 500;
+
+          & svg{
+            margin-right: 10px;
+          }
+          &__item{
+            display: flex;
+            align-items: center;
+          }
+
+        
+      }
       
       
 
@@ -24,33 +43,44 @@
 
       }
       &__text{
-        padding: 20px;
+        padding: 20px 100px;
+        & p{
+          padding: 20px 0;
+          
+        }
+        & .title{
+          font-size: 2.5rem;
+          font-weight: 800;
+        }
       }
     }
 
     &__tickets{
-      flex: 1;
-      padding: 10px 20px;
-      background: rgb(227,227,227);
-background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(241,241,241,1) 78%, rgba(235,235,235,1) 100%);
+      flex: 2;
+      position: relative;
+     top: 0px;
+   width: 340px;
+      height: 70vh;
+      background: rgb(227, 227, 227);
+      //background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(241,241,241,1) 78%, rgba(235,235,235,1) 100%);
       color: rgb(0, 0, 0);
-      -webkit-box-shadow: 0px 0px 5px 4px #000000; 
-box-shadow: 0px 0px 11px 4px #1d1d1d;
+      -webkit-box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.45); 
+      box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.45);
+      transition: all 0.2s;
      
       &__title{
-      background-color: black;
-      color: rgb(209, 209, 209);
+        font-size: 1.1rem;
+      background-color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
       font-weight: 500;
       padding: 10px;
       text-align: center;
-      border-radius: 10px 10px 0 0;
+      margin-bottom: 20px;
+      border: rgb(0, 0, 0) solid 2px;
+      //border-radius: 10px 10px 0 0;
       }
 
-      &__content{
-        border: 1px solid black;
-        border-radius: 0 0 10px 10px;
-  
-      }
+   
      
     }
 
@@ -67,6 +97,7 @@ box-shadow: 0px 0px 11px 4px #1d1d1d;
  /*  background-image: linear-gradient(to right, #008cff,  #a31b9c,  #fffb09);
   -webkit-box-shadow: 0px 0px 11px 4px #000000;  */
   border-radius: 10px;
+  margin: 0 20px;
 
 
   color: white;
@@ -80,7 +111,12 @@ box-shadow: 0px 0px 11px 4px #1d1d1d;
   }
 
   &:hover{
-    background-color: rgba(34, 187, 42, 0.733);
+    background-color: rgba(34, 187, 42, 0.856);
   }
 }
+}
+
+.tickets-ghost{
+  flex: 2;
+    
 }

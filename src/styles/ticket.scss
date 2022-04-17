@@ -3,7 +3,16 @@
     align-items: center;
     justify-content: space-around;
     padding: 8px;
-    border-top: 1px solid black;
+    font-size: .8rem;
+    border-bottom: 1px solid rgba(56, 56, 56, 0.281);
+    margin: 0 10px;
+    
+
+    &__price{
+        & span{
+            font-size: 0.6rem;
+        }
+    }
 
 
 
@@ -19,7 +28,7 @@
     }
     &__title{
        
-     
+   
      
     
     
@@ -28,12 +37,12 @@
       
        
         & svg{
-            
+           cursor: pointer; 
         }
 
         & span{
         padding: 0 5px;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         
         position: relative;
         top: -4px;
