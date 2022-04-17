@@ -1,0 +1,45 @@
+.ticket{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px;
+    border-top: 1px solid black;
+
+
+
+ 
+   
+
+    & svg{
+        
+        & path{
+            fill: rgb(0, 0, 0);
+        }
+        
+    }
+    &__title{
+       
+     
+     
+    
+    
+    }
+    &__value{
+      
+       
+        & svg{
+            
+        }
+
+        & span{
+        padding: 0 5px;
+        font-size: 1.5rem;
+        
+        position: relative;
+        top: -4px;
+       
+    
+        }
+    }
+}
+

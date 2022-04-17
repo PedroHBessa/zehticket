@@ -3,6 +3,7 @@ import { useNavigate, Outlet } from "react-router-dom";
 import Footer from "./Footer";
 
 import NavBar from "./NavBar";
+import Payment from "./Payment";
 
 
 const Main = () => {
@@ -14,6 +15,7 @@ const Main = () => {
       <>
                 <NavBar />
                 <Outlet />
+                <Payment />
                 <Footer /> 
         </>  
     )

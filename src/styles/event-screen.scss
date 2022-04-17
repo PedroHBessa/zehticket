@@ -1,10 +1,86 @@
 .event-screen{
-    padding: 5% 10%;
-    background-color: #fff;
+  display: flex;
+ color: antiquewhite;
+    background-color: rgb(0, 0, 0);
+
+    &__totals{
+      padding: 20px;
+      
+      &__main{
+        font-weight: 500;
+      }
+
+       & span{
+        font-size: .8rem;
+      }
+    }
+
+    &__content{
+      flex: 3;
+      
+      
+
+      &__img{
+
+      }
+      &__text{
+        padding: 20px;
+      }
+    }
+
+    &__tickets{
+      flex: 1;
+      padding: 10px 20px;
+      background: rgb(227,227,227);
+background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(241,241,241,1) 78%, rgba(235,235,235,1) 100%);
+      color: rgb(0, 0, 0);
+      -webkit-box-shadow: 0px 0px 5px 4px #000000; 
+box-shadow: 0px 0px 11px 4px #1d1d1d;
+     
+      &__title{
+      background-color: black;
+      color: rgb(209, 209, 209);
+      font-weight: 500;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+      }
+
+      &__content{
+        border: 1px solid black;
+        border-radius: 0 0 10px 10px;
+  
+      }
+     
+    }
 
 &__content{
+
   & h1{
-   padding: 20px 0;   
+  
+   padding: 20px 0;
+    
+  }
+}
+&__button{
+  background-color: rgb(34, 187, 42);
+ /*  background-image: linear-gradient(to right, #008cff,  #a31b9c,  #fffb09);
+  -webkit-box-shadow: 0px 0px 11px 4px #000000;  */
+  border-radius: 10px;
+
+
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+ 
+
+  & span{
+    padding: 0 10px;
+    font-weight: 500;
+  }
+
+  &:hover{
+    background-color: rgba(34, 187, 42, 0.733);
   }
 }
 }

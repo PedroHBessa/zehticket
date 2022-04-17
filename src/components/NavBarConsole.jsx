@@ -39,12 +39,12 @@ const NavBarConsole = () => {
             <div className="navbar__user-console__text" onClick={() =>toggleMenu()}>
                 <span>{`Bem-vindo,  nome`}</span>
             
-                <img
+             {/*    <img
                 width={60}
                 height={60}
                 src={require("../assets/profile-s.jpeg")}
                 alt="/"
-                />
+                /> */}
                
                 <BiDownArrow className="arrow" />
                
