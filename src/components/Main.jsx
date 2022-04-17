@@ -15,7 +15,7 @@ const Main = () => {
       <>
                 <NavBar />
                 <Outlet />
-                <Payment />
+                
                 <Footer /> 
         </>  
     )
