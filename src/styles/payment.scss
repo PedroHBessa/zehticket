@@ -1,0 +1,17 @@
+.payment{
+    display: flex;
+    align-items: flex-end;
+
+    & label{
+        text-align: center;
+        flex:1;
+        
+
+        & input{
+            margin: 10px 0;
+        }
+    }
+
+    
+}
+

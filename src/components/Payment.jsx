@@ -1,47 +1,68 @@
+import { Outlet } from "react-router-dom";
 import Form from "./Form";
 
 const Payment = () => {
     return (
        
            <Form title="Pagamento">
-      <>
+
+
+      <div className="payment">
       <label>
-        NOME DO TITULAR
+        Cartão de débito
       
         <input
           name="holder-name"
-          type="text"
+          type="radio"
           placeholder=""
           style={{textTransform: "uppercase"}}
 
           
         />
       </label>
-    <label>
-        NÚMERO DO CARTÃO
+      <label>
+        Cartão de crédito
+      
         <input
-          name="card-number"
-          type="text"
+          name="holder-name"
+          type="radio"
           placeholder=""
-        
+          style={{textTransform: "uppercase"}}
+
+          
         />
       </label>
-
       <label>
+        Boleto
+      
         <input
-          name="credit-validity"
-          type="text"
+          name="holder-name"
+          type="radio"
           placeholder=""
-         
-           
+          style={{textTransform: "uppercase"}}
+
+          
+        />
+      </label>
+      <label>
+        Pix
+      
+        <input
+          name="holder-name"
+          type="radio"
+          placeholder=""
+          style={{textTransform: "uppercase"}}
+
+          
         />
       </label>
       <div className="login-form__error"></div>
-
+      </div>
+      <Outlet />
       <button  className="login-form__button">
         <strong>Enviar</strong>
       </button>
-      </>
+     
     </Form> 
        
     )

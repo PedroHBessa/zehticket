@@ -12,6 +12,7 @@ import { GoLocation } from 'react-icons/go'
 import br from '../assets/flag-icons-main/flags/4x3/br.svg'
 
 import GoogleMapReact from "google-map-react";
+import { Link } from "react-router-dom";
 
 
 function EventScreen(props) {
@@ -245,8 +246,8 @@ function EventScreen(props) {
                     </div>
 
          <div className="event-screen__button">
-           <BsCart4 />
-                        <span>COMPRAR INGRESSO</span>
+         <Link to={"payment"}><BsCart4 />
+                        <span>COMPRAR INGRESSO</span></Link>
                     </div>
 
 

@@ -1,12 +1,13 @@
 .form{
-   
+   display: inline-flex;
+   flex-direction: column;
     position: relative;
     margin: 70px auto;
     padding: 50px;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     min-width: 20%;
-    width: 30%;
+    width: inherit;
     transform: scale(0, 0);
     transition: transform 0.5s;
         & h2{

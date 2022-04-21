@@ -27,7 +27,8 @@ function Login(props) {
 
   return (
     <Form title="Login">
-      <>
+      <div className="login">
+        
     <label>
         <input
           name="email"
@@ -60,7 +61,7 @@ function Login(props) {
       <button onClick={sendData} className="login-form__button">
         <strong>Login</strong>
       </button>
-      </>
+      </div>
     </Form>
   );
 }

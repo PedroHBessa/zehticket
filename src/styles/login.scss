@@ -5,6 +5,12 @@ section{
     
 }
 
+.login{
+
+    display: flex;
+    flex-direction: column;
+}
+
 .login-form{
     position: absolute;
     margin: 40px auto;

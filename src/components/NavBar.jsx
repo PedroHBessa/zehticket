@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { Outlet, Link, useNavigate } from "react-router-dom";
 
 import { useState } from "react";
-import { BiDownArrow } from "react-icons/bi"
+import { BiSearch, Search } from "react-icons/bi"
 
 
 import UserMenu from "./UserMenu";
@@ -55,6 +55,7 @@ function NavBar() {
       </div>
       <div className="navbar__search">
         <form action="">
+        <BiSearch fill="#787878" size={'1.3em'} style={{position: "absolute", top: "41%", marginLeft: "15px"}} />
           <input
             className="navbar__search__form__input"
             type="text"
