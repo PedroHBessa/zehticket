@@ -1,6 +1,8 @@
+@import "./responsive.scss";
 @import "./globals.scss";
 @import "./login.scss";
 @import "./navbar.scss";
+@import "./menu-mb.scss";
 @import "./contact.scss";
 @import "./user-menu.scss";
 @import "./ticket.scss";
@@ -10,4 +12,4 @@
 @import "./footer";
 @import "./payment.scss";
 @import "./event-list.scss";
-@import "./card.scss"
+@import "./card.scss";

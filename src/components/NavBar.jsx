@@ -5,14 +5,54 @@ import { Outlet, Link, useNavigate } from "react-router-dom";
 
 import { useState } from "react";
 import { BiSearch, Search } from "react-icons/bi"
+import { AiOutlineMenu } from "react-icons/ai"
 
 
 import UserMenu from "./UserMenu";
-import NavBarConsole from "./NavBarConsole";
+import MenuMb from "./MenuMb";
+
 
 function NavBar() {
 
+  const [userName, setUserName] = useState("");
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const [rectTop, setRectTop] = useState(false);
 
+  
+
+
+
+  useEffect(()=>{
+
+    const menuMb = document.querySelector(".menu-mb");
+    menuMb.style.transform = `translateY(${-menuMb.clientHeight}px)`;
+   
+
+  
+  },[])
+
+    const toggleMenu = () => {
+
+      
+     
+      const menuMb = document.querySelector(".menu-mb");
+
+  
+      menuMb.style.opacity = 1
+
+        if (menuIsOpen) {
+          menuMb.style.transform = `translateY(${-menuMb.clientHeight}px)`;
+      
+          
+          
+        } else {
+          menuMb.style.transform = `translateY(0px)`;
+          
+          
+         
+        }
+        setMenuIsOpen(!menuIsOpen)
+      };
 
 
  
@@ -46,23 +86,14 @@ function NavBar() {
   
 
   return (
-    <div className="bar">
-         
+    <>
+      
       <div className="navbar">
       <div className="navbar__logo">
         {" "}
       ZEHTICKET
       </div>
-      <div className="navbar__search">
-        <form action="">
-        <BiSearch fill="#787878" size={'1.3em'} style={{position: "absolute", top: "41%", marginLeft: "15px"}} />
-          <input
-            className="navbar__search__form__input"
-            type="text"
-            placeholder="procurar eventos"
-          />
-        </form>
-      </div>
+     
       <div className="navbar__menu">
       <ul className="navbar__menu__logedout">
         <li>
@@ -81,23 +112,34 @@ function NavBar() {
           <li >
         <Link id="contact" to={"/signup"}>Cadastre-se</Link>
           </li>
-       
+          
+        <span className="navbar__producer-btn">
+          <a target={"_blank"} href="https://adm.zehticket.com.br/">ÁREA DO PRODUTOR</a>
+    
+          </span>
+    
       
       </ul>
+    
+      <div className="mob-menu" onClick={toggleMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-      <div className="navbar__producer-btn">
-      <a target={"_blank"} href="https://adm.zehticket.com.br/">ÁREA DO PRODUTOR</a>
-     
-    </div>
+    
+        
+      </div>
+  
    
     </div>
-    )
+    <div  onClick={toggleMenu}>
+      <MenuMb />
+    </div>
+    
      
  
-      <div>
-    
-      </div>
-    </div>
+   
+    </>
   );
 }
 

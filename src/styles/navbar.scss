@@ -1,4 +1,4 @@
-.bar::before{
+.navbar::before{
     
   content: "";
   display: block;
@@ -12,24 +12,17 @@
 }
 
 .navbar{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0 15px 0;
-  position: relative;
-  background-image: linear-gradient(rgb(58, 58, 58), rgb(0, 0, 0));
-  z-index: 99;
-  /* &::after{
-    content: "";
-    background-image: linear-gradient(to right,#42A1EC, #0070C9,  #a31b9c,  #fffb09);
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    height: 5px;
-    z-index: 80;
-  } */
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: relative;
+    background-image: linear-gradient(rgb(58, 58, 58), rgb(0, 0, 0));
+    z-index: 99;
 
+ 
  
   
  
@@ -64,27 +57,16 @@
     text-align: left;
     &::before{
       content: "";
-      padding-left: 40px;
+     
     }
   }
 
-  &__search{
-    width: auto;
-    margin: 0 20px;
-    &__form{
 
-      height: 100%;
-      &__input{
-        width: 100%;
-        height: 100%;
-        padding: 10px 40px;
-        border-radius: 50px;
-        
-      }
-    }
-  }
 
   &__menu{
+    display: flex;
+    align-items: center;
+   
   
    color: rgba(255, 255, 255, 0.507);
     
@@ -92,15 +74,11 @@
      text-align: right;
      float: right;
      white-space: nowrap;
-     
+     @include media('<=md'){
+      display: none;
+    }
     
 
-     &::after{
-      
-        content: "";
-        margin-right: 20px;
-      
-     }
 
     }
     & ul li{
@@ -108,9 +86,13 @@
       font-size: 16px;
       
       display: inline-block;
-      padding: 15px 8px;
+      
       opacity: 1;
       transition: color 0.5s;
+
+      & a{
+        padding: 15px 8px;
+      }
      
     }
     & ul li:hover{
@@ -129,7 +111,7 @@
     border: rgba(255, 255, 255, 0.507) solid 1px;
 
     padding: 10px 15px;
-    margin-right: 40px;
+    margin-left: 20px;
     border-radius: 10px;
     font-size: 13px;
    
@@ -169,5 +151,27 @@
 
 .special-btn{
   
+}
+
+
+.mob-menu{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  cursor: pointer;
+
+  @include media('<=md'){
+    display: flex;
+  }
+
+  & div{
+    height: 4px;
+    width: 40px;
+    
+    background-color: rgb(92, 92, 92);
+    border-radius: 10px;
+  }
 }
 
