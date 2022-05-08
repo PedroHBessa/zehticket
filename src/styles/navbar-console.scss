@@ -1,13 +1,5 @@
-.navbar{
-  
-   
-  
-  
-
- 
-  
- 
-  &__user-console{
+.navbar {
+  &__user-console {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -15,43 +7,40 @@
     padding: 15px 0 15px 0;
 
     position: relative;
-  background-image: linear-gradient(rgb(58, 58, 58), rgb(0, 0, 0));
-  z-index: 99;
+    background-image: linear-gradient(rgb(58, 58, 58), rgb(0, 0, 0));
+    z-index: 99;
 
-    &__text{
+    &__text {
       color: rgba(255, 255, 255, 0.671);
       display: flex;
       align-items: center;
 
-      & svg{
+      & svg {
         position: relative;
         left: -50px;
         top: 30px;
         color: rgba(255, 255, 255, 0.9);
         transition: transform 1s;
       }
-     
 
-      & img{
+      & img {
         border-radius: 50px;
         border: rgba(255, 255, 255, 0.9) 3px solid;
         margin: 0 40px;
       }
     }
 
-    &__img img{
+    &__img img {
       border-radius: 50px;
       border: rgba(255, 255, 255, 0.9) 3px solid;
       margin: 0 40px;
     }
 
-    &__img span{
+    &__img span {
       position: relative;
       left: -50px;
       top: 10px;
       color: rgba(255, 255, 255, 0.9);
-     
     }
-
-  
-  }}
+  }
+}

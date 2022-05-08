@@ -5,16 +5,8 @@ import NavBarConsole from "./NavBarConsole";
 import Signup from "./Contact";
 import UserMenu from "./UserMenu";
 
-
 const Home = () => {
-    return (
-        <div className="home">
-         
-          
-           
-          
-        </div>
-    )
-}
+  return <div className="home"></div>;
+};
 
 export default Home;

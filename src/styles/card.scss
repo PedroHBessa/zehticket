@@ -1,25 +1,25 @@
 .card {
     margin-bottom: 10px;
     position: relative;
- 
-    &__content{
+
+    &__content {
         background-color: white;
         padding: 20px;
         text-align: left;
-        & p{
+        & p {
             padding-bottom: 10px;
         }
-        &__info{
+        &__info {
             display: flex;
             padding: 3px 0;
 
-            & span{
+            & span {
                 padding-left: 8px;
             }
         }
     }
 
-    & .hover{
+    & .hover {
         position: absolute;
         background-color: rgb(14, 14, 14);
         opacity: 0;
@@ -31,25 +31,18 @@
         align-items: center;
         transition: opacity 0.3s;
 
-        &:hover{
-            opacity: 0.90;
+        &:hover {
+            opacity: 0.9;
         }
-       & span{
-         color: white;
-           opacity: 1;
-           font-weight: 800;
-       }
-        
+        & span {
+            color: white;
+            opacity: 1;
+            font-weight: 800;
+        }
     }
-   
-
 }
 
-img{
+img {
     padding: 0;
     margin: 0;
-    
 }
-
-
-

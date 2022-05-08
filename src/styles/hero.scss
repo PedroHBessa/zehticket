@@ -1,16 +1,15 @@
-.hero{
-    opacity: 0.8;
-    margin: 50px 400px
- 
+.hero {
+  opacity: 0.8;
+  margin: 50px 400px;
 }
 
 .paging-dot {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .paging-dot > circle {
-    r: 6px;
-    cx: 10px;
-    cy: 10px;
-  }
+  width: 20px;
+  height: 20px;
+}
+
+.paging-dot > circle {
+  r: 6px;
+  cx: 10px;
+  cy: 10px;
+}

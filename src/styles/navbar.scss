@@ -1,112 +1,87 @@
-.navbar::before{
-    
+.navbar::before {
   content: "";
   display: block;
-  background-image: linear-gradient(to right,#42A1EC, #0070C9,  #a31b9c,  #fffb09);
+  background-image: linear-gradient(to right, #42a1ec, #0070c9, #a31b9c, #fffb09);
   position: absolute;
   width: 100%;
- top: 82px;
- left: 0;
+  top: 82px;
+  left: 0;
   height: 5px;
   z-index: 100;
 }
 
-.navbar{
- 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    position: relative;
-    background-image: linear-gradient(rgb(58, 58, 58), rgb(0, 0, 0));
-    z-index: 99;
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: relative;
+  background-image: linear-gradient(rgb(58, 58, 58), rgb(0, 0, 0));
+  z-index: 99;
 
- 
- 
-  
- 
-  &__user-console{
+  &__user-console {
     display: flex;
     align-items: center;
     cursor: pointer;
 
-    &__text{
-     
+    &__text {
     }
 
-    &__img img{
-     
+    &__img img {
     }
 
-    &__img span{
+    &__img span {
       position: relative;
       left: -50px;
       top: 10px;
       color: rgba(255, 255, 255, 0.9);
-     
     }
-
-  
   }
 
-  &__logo{
-  
+  &__logo {
     font-size: 50px;
     color: white;
     text-align: left;
-    &::before{
+    &::before {
       content: "";
-     
     }
   }
 
-
-
-  &__menu{
+  &__menu {
     display: flex;
     align-items: center;
-   
-  
-   color: rgba(255, 255, 255, 0.507);
-    
-    & ul{
-     text-align: right;
-     float: right;
-     white-space: nowrap;
-     @include media('<=md'){
-      display: none;
-    }
-    
 
+    color: rgba(255, 255, 255, 0.507);
 
+    & ul {
+      text-align: right;
+      float: right;
+      white-space: nowrap;
+      @include media("<=md") {
+        display: none;
+      }
     }
-    & ul li{
+    & ul li {
       font-weight: 500;
       font-size: 16px;
-      
+
       display: inline-block;
-      
+
       opacity: 1;
       transition: color 0.5s;
 
-      & a{
+      & a {
         padding: 15px 8px;
       }
-     
     }
-    & ul li:hover{
+    & ul li:hover {
       color: white;
       cursor: pointer;
-      
-      
-     
     }
-    
-   
   }
 
-  &__producer-btn{
+  &__producer-btn {
     color: rgba(255, 255, 255, 0.507);
     border: rgba(255, 255, 255, 0.507) solid 1px;
 
@@ -114,47 +89,40 @@
     margin-left: 20px;
     border-radius: 10px;
     font-size: 13px;
-   
+
     text-align: center;
     cursor: pointer;
     transition: color 0.5s, border 0.5s, background-image 0.5s;
     font-weight: 500;
 
-    & a{
+    & a {
       white-space: nowrap;
     }
 
-    &:hover{
+    &:hover {
       color: rgba(255, 255, 255, 0.9);
-    
-     
-      
-      
     }
   }
 
-  &__icons{
-    margin:  0 20px;
+  &__icons {
+    margin: 0 20px;
 
-    & i{
+    & i {
       font-size: 25px;
       color: white;
       padding: 10px;
-      
     }
   }
 }
 
-.arrow svg{
+.arrow svg {
   transition: all 1s;
 }
 
-.special-btn{
-  
+.special-btn {
 }
 
-
-.mob-menu{
+.mob-menu {
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -162,16 +130,15 @@
   height: 30px;
   cursor: pointer;
 
-  @include media('<=md'){
+  @include media("<=md") {
     display: flex;
   }
 
-  & div{
+  & div {
     height: 4px;
     width: 40px;
-    
+
     background-color: rgb(92, 92, 92);
     border-radius: 10px;
   }
 }
-

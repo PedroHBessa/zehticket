@@ -1,11 +1,10 @@
 const Pix = () => {
-    return (
-        <>
-            <input type="text" />
-            <img src="" alt="" srcset="" />
-        </>
-    )
-
-}
+  return (
+    <>
+      <input type="text" />
+      <img src="" alt="" srcset="" />
+    </>
+  );
+};
 
 export default Pix;

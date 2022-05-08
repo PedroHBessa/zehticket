@@ -18,11 +18,6 @@ import {
 import Signup from './components/Signup';
 import Pix from './components/Pix';
 
-
-
-
-
-
 function App() {
   return (
     <div className="App">

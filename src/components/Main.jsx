@@ -7,23 +7,16 @@ import NavBar from "./NavBar";
 
 import Payment from "./Payment";
 
-
 const Main = () => {
+  return (
+    <>
+      <NavBar />
 
+      <Outlet />
 
-    return (
-     
-       
-      <>
-                <NavBar />
-
-            
-              
-                <Outlet />
-                
-                <Footer /> 
-        </>  
-    )
-}
+      <Footer />
+    </>
+  );
+};
 
 export default Main;

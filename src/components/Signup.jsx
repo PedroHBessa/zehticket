@@ -11,8 +11,6 @@ function Signup(props) {
 
   const [loginError, setLoginError] = useState("");
 
-
-
   const sendData = () => {
     console.log(data);
     console.log("loading...");
@@ -28,51 +26,51 @@ function Signup(props) {
   return (
     <Form title="Cadastre-se">
       <>
-      <label>
-        <input
-          name="name"
-          type="text"
-          placeholder="nome"
-          onChange={(e) =>
-            setData({
-              ...data,
-              email: e.target.value,
-            })
-          }
-        />
-      </label>
-    <label>
-        <input
-          name="email"
-          type="text"
-          placeholder="email"
-          onChange={(e) =>
-            setData({
-              ...data,
-              email: e.target.value,
-            })
-          }
-        />
-      </label>
+        <label>
+          <input
+            name="name"
+            type="text"
+            placeholder="nome"
+            onChange={(e) =>
+              setData({
+                ...data,
+                email: e.target.value,
+              })
+            }
+          />
+        </label>
+        <label>
+          <input
+            name="email"
+            type="text"
+            placeholder="email"
+            onChange={(e) =>
+              setData({
+                ...data,
+                email: e.target.value,
+              })
+            }
+          />
+        </label>
 
-      <label>
-        <input
-          name="password"
-          type="password"
-          placeholder="password"
-          onChange={(e) =>
-            setData({
-              ...data,
-              password: e.target.value,
-            })
-          }
-        />
-      </label>
-      <div className="login-form__error">{loginError}</div>
+        <label>
+          <input
+            name="password"
+            type="password"
+            placeholder="password"
+            onChange={(e) =>
+              setData({
+                ...data,
+                password: e.target.value,
+              })
+            }
+          />
+        </label>
+        <div className="login-form__error">{loginError}</div>
 
-      <button onClick={sendData} className="login-form__button">
-        <strong>Enviar</strong>
-      </button>
+        <button onClick={sendData} className="login-form__button">
+          <strong>Enviar</strong>
+        </button>
       </>
     </Form>
   );

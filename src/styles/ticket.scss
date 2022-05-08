@@ -1,54 +1,36 @@
-.ticket{
+.ticket {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 8px;
-    font-size: .8rem;
+    font-size: 0.8rem;
     border-bottom: 1px solid rgba(56, 56, 56, 0.281);
     margin: 0 10px;
-    
 
-    &__price{
-        & span{
+    &__price {
+        & span {
             font-size: 0.6rem;
         }
     }
 
-
-
- 
-   
-
-    & svg{
-        
-        & path{
+    & svg {
+        & path {
             fill: rgb(0, 0, 0);
         }
-        
     }
-    &__title{
-       
-   
-     
-    
-    
+    &__title {
     }
-    &__value{
-      
-       
-        & svg{
-           cursor: pointer; 
+    &__value {
+        & svg {
+            cursor: pointer;
         }
 
-        & span{
-        padding: 0 5px;
-        font-size: 1.2rem;
-        
-        position: relative;
-        top: -4px;
-       
-    
+        & span {
+            padding: 0 5px;
+            font-size: 1.2rem;
+
+            position: relative;
+            top: -4px;
         }
     }
 }
-

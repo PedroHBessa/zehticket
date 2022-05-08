@@ -11,8 +11,6 @@ function Login(props) {
 
   const [loginError, setLoginError] = useState("");
 
-
-
   const sendData = () => {
     console.log(data);
     console.log("loading...");
@@ -28,39 +26,38 @@ function Login(props) {
   return (
     <Form title="Login">
       <div className="login">
-        
-    <label>
-        <input
-          name="email"
-          type="text"
-          placeholder="email"
-          onChange={(e) =>
-            setData({
-              ...data,
-              email: e.target.value,
-            })
-          }
-        />
-      </label>
+        <label>
+          <input
+            name="email"
+            type="text"
+            placeholder="email"
+            onChange={(e) =>
+              setData({
+                ...data,
+                email: e.target.value,
+              })
+            }
+          />
+        </label>
 
-      <label>
-        <input
-          name="password"
-          type="password"
-          placeholder="password"
-          onChange={(e) =>
-            setData({
-              ...data,
-              password: e.target.value,
-            })
-          }
-        />
-      </label>
-      <div className="login-form__error">{loginError}</div>
+        <label>
+          <input
+            name="password"
+            type="password"
+            placeholder="password"
+            onChange={(e) =>
+              setData({
+                ...data,
+                password: e.target.value,
+              })
+            }
+          />
+        </label>
+        <div className="login-form__error">{loginError}</div>
 
-      <button onClick={sendData} className="login-form__button">
-        <strong>Login</strong>
-      </button>
+        <button onClick={sendData} className="login-form__button">
+          <strong>Login</strong>
+        </button>
       </div>
     </Form>
   );

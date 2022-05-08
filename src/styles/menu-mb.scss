@@ -1,5 +1,4 @@
-.menu-mb{
-
+.menu-mb {
     position: absolute;
     opacity: 0;
     z-index: 10;
@@ -8,30 +7,28 @@
     background-color: rgb(143, 143, 143);
     padding: 10px 0;
     //transform: translate(0px);
-   
+
     transition: transform 1s;
 
-    @include media('>md'){
+    @include media(">md") {
         display: none;
-      }
+    }
 
-    & ul{
+    & ul {
         display: flex;
         flex-direction: column;
 
-        & li{
+        & li {
             padding: 10px 0;
             cursor: pointer;
 
-            & a{
+            & a {
                 display: block;
             }
 
-            &:hover{
+            &:hover {
                 color: rgb(122, 122, 122);
             }
         }
-
-        
     }
 }

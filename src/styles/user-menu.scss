@@ -1,65 +1,55 @@
-.user-menu{
+.user-menu {
     position: absolute;
     transform: translateY(-150%);
     right: 0;
     width: 350px;
     background-color: rgb(255, 255, 255);
     padding: 10px 0 0 0;
-    background-color:  rgba(0, 0, 0);
+    background-color: rgba(0, 0, 0);
     box-shadow: 5px 5px 24px 5px #000000;
     padding-top: 0px;
     z-index: 95;
     transition: transform 1s;
-    & ul li a{
+    & ul li a {
         text-align: center;
-       display: block;
+        display: block;
         padding: 20px 0;
         margin: 0 0;
         cursor: pointer;
-    
+
         font-weight: 500;
         letter-spacing: 3px;
         font-size: 18px;
         color: rgba(255, 255, 255, 0.74);
         transform: scale(1);
-       opacity: 1;
-       border-bottom: solid  1px rgba(70, 70, 70, 0.247);
-       transition: all 0.8s;
-       
+        opacity: 1;
+        border-bottom: solid 1px rgba(70, 70, 70, 0.247);
+        transition: all 0.8s;
 
-       &:hover{
-        color: rgba(255, 255, 255, 0.938);
-    
-       }
+        &:hover {
+            color: rgba(255, 255, 255, 0.938);
+        }
 
-        &::after{
-           content: "";
+        &::after {
+            content: "";
 
             position: absolute;
-      left: 50%;
+            left: 50%;
             top: 63px;
-           
+
             height: 2px;
             width: 0;
-             display: block;
+            display: block;
             text-align: center;
-            background-image: linear-gradient(to right, #42A1EC, #0070C9, #a31b9c, #fffb09);
-          
-            transition: all 1s;
-            
-            
+            background-image: linear-gradient(to right, #42a1ec, #0070c9, #a31b9c, #fffb09);
 
-              
+            transition: all 1s;
         }
-        
-        &:hover::after{
+
+        &:hover::after {
             opacity: 1;
             left: 0;
             width: 100%;
-           
-        
         }
     }
-
-
 }
