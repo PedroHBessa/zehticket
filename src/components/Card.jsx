@@ -22,8 +22,8 @@ function Card(props) {
        
 
         <div className="card__content">
-          <h1>Evento do Marquin</h1>
-          <p>#eletrônica #dance #psico</p>
+          <h1>Evento teste</h1>
+          <p>#music #dance</p>
           <div className="card__content__info">
               <BsCalendarCheck size={'19px'} />
               <span>20/09/2022</span>
@@ -34,7 +34,7 @@ function Card(props) {
             </div>
             <div className="card__content__info">
               <GoLocation size={'19px'}/>
-              <span>Silva Jardim - RJ</span>
+              <span>Club - Berlim</span>
             </div>
 
         </div>

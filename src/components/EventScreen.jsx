@@ -77,7 +77,7 @@ function EventScreen(props) {
        
       
         <div className="event-screen__content__text">
-          <p className="title">Evento do marquin</p>
+          <p className="title">Evento teste</p>
           <div className="event-screen__content__info">
             <div className="event-screen__content__info__item">
               <BsCalendarCheck size={'19px'} />
@@ -111,7 +111,7 @@ function EventScreen(props) {
               <img width={20} src={br} alt="" srcset="" /> 
             </span>
             <span>
-              Jorginho tec tec do raitec 
+              artist ...
             </span>
            
             
@@ -122,7 +122,7 @@ function EventScreen(props) {
               <img width={20} src={br} alt="" srcset="" /> 
             </span>
             <span>
-              psyco átrico de jurujuba 
+              artist ...
             </span>
            
             
@@ -133,7 +133,7 @@ function EventScreen(props) {
               <img width={20} src={br} alt="" srcset="" /> 
             </span>
             <span>
-              forest do brokeback mountain
+              artist ...
             </span>
            
             
@@ -144,7 +144,7 @@ function EventScreen(props) {
               <img width={20} src={br} alt="" srcset="" /> 
             </span>
             <span>
-              nintendo travado 64bits 
+              artist ...
             </span>
            
             
@@ -155,7 +155,7 @@ function EventScreen(props) {
               <img width={20} src={br} alt="" srcset="" /> 
             </span>
             <span>
-              som ambiente de obra
+              artist ...
             </span>
            
             
@@ -166,7 +166,7 @@ function EventScreen(props) {
               <img width={20} src={br} alt="" srcset="" /> 
             </span>
             <span>
-              energy generator sound
+              artist ...
             </span>
            
             
@@ -177,33 +177,12 @@ function EventScreen(props) {
               <img width={20} src={br} alt="" srcset="" /> 
             </span>
             <span>
-              sharanga criminosa
+              artist ...
             </span>
            
             
           </div>
-          <div className="event-screen__content__line">
-            
-            <span className="event-screen__content__line__country">
-              <img width={20} src={br} alt="" srcset="" /> 
-            </span>
-            <span>
-              end enemy
-            </span>
-           
-            
-          </div>
-          <div className="event-screen__content__line">
-            
-            <span className="event-screen__content__line__country">
-              <img width={20} src={br} alt="" srcset="" /> 
-            </span>
-            <span>
-              tv chiada
-            </span>
-           
-            
-          </div>
+          
           <div className="maps" style={{width: "100%", height: "250px", marginTop: "40px"}}>
         <GoogleMapReact
 

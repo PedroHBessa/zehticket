@@ -1,17 +1,54 @@
 .payment{
     display: flex;
-    align-items: flex-end;
+    justify-content: space-around;
+    width: 600px;
 
-    & label{
-        text-align: center;
-        flex:1;
-        
-
-        & input{
-            margin: 10px 0;
-        }
+    & h3{
+        padding: 20px 0;
     }
 
     
+    &__info{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 20px;
+        border-right: 2px dotted black;
+        & form{
+            & label{
+               
+            }
+        }
+    }
+
+    &__checkout{
+        flex:1;
+    }
+
+    &__data{
+        & h3{
+            padding: 20px 0;
+        }
+        &__select{
+            display: flex;
+            padding: 10px 0 20px 0;
+           
+            & label{
+                text-align: center;
+                flex:1;
+               
+                
+        
+                & input{
+                 
+                   
+                }
+            }
+        }
+
+       
+    
+    }
 }
 
